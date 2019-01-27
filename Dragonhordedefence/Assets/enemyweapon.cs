@@ -6,6 +6,7 @@ public class enemyweapon : MonoBehaviour {
 
     public Transform firePoint;
     public GameObject bulletPrefab;
+    public GameObject hiteffect;
 
     private float timeBtwShots;
     public float startTimeBtwShots;
@@ -17,9 +18,9 @@ public class enemyweapon : MonoBehaviour {
     {
         if (timeBtwShots <= 0)
         {
-            
-          
-                Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+
+            Instantiate(hiteffect, firePoint.position, firePoint.rotation);
+            Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
                 timeBtwShots = startTimeBtwShots;
             
         }

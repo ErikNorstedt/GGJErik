@@ -223,7 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d001e49c9622fa4ba275872ecbe85d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
+  speed: 0.2
   Health: 250
   choosenDeathClip: {fileID: 1658222845395376, guid: 23ef4861b470c454ab1d9bdab074f398,
     type: 2}
@@ -276,6 +276,7 @@ MonoBehaviour:
   firePoint: {fileID: 2135528427}
   bulletPrefab: {fileID: 1282863642345452, guid: f9114018f3a9a7643a994a82ce55488e,
     type: 2}
+  hiteffect: {fileID: 1109067917035468, guid: d733db28454c3384e83ed0735a322862, type: 2}
   startTimeBtwShots: 1.5
 --- !u!1 &322723806
 GameObject:
@@ -1146,7 +1147,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2135528426}
   m_LocalRotation: {x: 0, y: 0, z: 0.953717, w: 0.30070582}
-  m_LocalPosition: {x: -0.285, y: -1.11, z: 0}
+  m_LocalPosition: {x: -0.56, y: -1.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 193430654}
