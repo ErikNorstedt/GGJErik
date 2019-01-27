@@ -157,7 +157,7 @@ GameObject:
   - component: {fileID: 193430656}
   - component: {fileID: 193430655}
   - component: {fileID: 193430658}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Airship_0
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -505,7 +505,7 @@ GameObject:
   - component: {fileID: 676943010}
   - component: {fileID: 676943015}
   - component: {fileID: 676943014}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: archerfixed_0
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -1241,7 +1241,7 @@ GameObject:
   - component: {fileID: 1473683716}
   - component: {fileID: 1473683715}
   - component: {fileID: 1473683720}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Knight_0
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -1991,7 +1991,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2135528427}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: firePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
