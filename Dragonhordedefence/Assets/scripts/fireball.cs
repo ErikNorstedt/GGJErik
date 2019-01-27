@@ -19,12 +19,15 @@ public class fireball : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        enemyScript enemy = collision.GetComponent<enemyScript>();
-        if (enemy != null)
+        if(collision.CompareTag("Enemy"))
         {
-            enemy.TakeDamage(damage);
+            enemyScript enemy = collision.GetComponent<enemyScript>();
+            if (enemy != null)
+            {
+                enemy.TakeDamage(damage);
+            }
+            Instantiate(hiteffect, transform.position, transform.rotation);
+            Destroy(gameObject);
         }
-        Instantiate(hiteffect, transform.position, transform.rotation);
-        Destroy(gameObject);
     }
 }
