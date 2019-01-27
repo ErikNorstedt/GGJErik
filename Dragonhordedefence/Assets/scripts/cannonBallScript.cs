@@ -21,4 +21,17 @@ public class cannonBallScript : MonoBehaviour {
     void Update () {
 		
 	}
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Tower"))
+        {
+            PlayerHealth player = collision.GetComponent<PlayerHealth>();
+            if (player != null)
+            {
+                player.TakeDamage(damage);
+            }
+            Instantiate(hiteffect, transform.position, transform.rotation);
+            Destroy(gameObject);
+        }
+    }
 }
