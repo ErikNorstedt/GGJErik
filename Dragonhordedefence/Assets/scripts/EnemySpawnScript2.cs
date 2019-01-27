@@ -5,10 +5,13 @@ using UnityEngine;
 public class EnemySpawnScript2 : MonoBehaviour
 {
     public GameObject enemy;
-    float randX;
+    float randY;
     Vector2 whereToSpawn;
     public float spawnRate = 4f;
     float nextSpawn = 0.0f;
+    public float randomRange1;
+    public float randomRange2;
+        
 
     float DspawnRate = 0.05f;
     // Use this for initialization
@@ -23,8 +26,8 @@ public class EnemySpawnScript2 : MonoBehaviour
         if (Time.time > nextSpawn)
         {
             nextSpawn = Time.time + spawnRate;
-            randX = Random.Range(8f, 8f);
-            whereToSpawn = new Vector2(randX, transform.position.y);
+            randY = Random.Range(randomRange1, randomRange2);
+            whereToSpawn = new Vector2(transform.position.x, randY);
             Instantiate(enemy, whereToSpawn, Quaternion.identity);
             spawnRate = spawnRate - DspawnRate;
         }
