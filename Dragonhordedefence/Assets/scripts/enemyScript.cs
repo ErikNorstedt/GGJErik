@@ -15,6 +15,15 @@ public class enemyScript : MonoBehaviour {
         rb.velocity = transform.right * -speed;
     }
 
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Stop"))
+        {
+            speed = 0f;
+            rb.velocity = Vector2.zero;
+        }
+    }
+
     public void TakeDamage(int damage)
     {
         Health -= damage;
