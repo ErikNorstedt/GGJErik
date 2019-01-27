@@ -4,8 +4,16 @@ using UnityEngine;
 
 public class enemyScript : MonoBehaviour {
 
+    public float speed = 1f;
     public int Health = 100;
     public GameObject choosenDeathClip;
+    Rigidbody2D rb;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        rb.velocity = transform.right * -speed;
+    }
 
     public void TakeDamage(int damage)
     {
