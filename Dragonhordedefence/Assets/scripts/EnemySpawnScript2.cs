@@ -13,7 +13,9 @@ public class EnemySpawnScript2 : MonoBehaviour
     public float randomRange2;
         
 
-    float DspawnRate = 0.05f;
+    public float DspawnRate = 0.05f;
+    public float DspawnRateHigh = 10f;
+    public float DspwanRateLow = 1f;
     // Use this for initialization
     void Start()
     {
@@ -25,11 +27,16 @@ public class EnemySpawnScript2 : MonoBehaviour
     {
         if (Time.time > nextSpawn)
         {
-            nextSpawn = Time.time + spawnRate;
+            nextSpawn = Time.time + Random.Range(DspwanRateLow + spawnRate, DspawnRateHigh + spawnRate);
             randY = Random.Range(randomRange1, randomRange2);
             whereToSpawn = new Vector2(transform.position.x, randY);
             Instantiate(enemy, whereToSpawn, Quaternion.identity);
+            
+            if (spawnRate >= 0)
+            {
             spawnRate = spawnRate - DspawnRate;
+            }
         }
+        
     }
 }
