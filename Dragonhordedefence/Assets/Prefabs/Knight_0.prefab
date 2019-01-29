@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d001e49c9622fa4ba275872ecbe85d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.7
+  speed: 1.5
   Health: 60
   choosenDeathClip: {fileID: 1910198898461222, guid: 8a155ac48ab728742a9461d6094f283d,
     type: 2}
